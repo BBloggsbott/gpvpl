@@ -4,10 +4,9 @@ import lombok.Getter;
 import lombok.ToString;
 import org.bbloggsbott.blocks.Block;
 import org.bbloggsbott.environment.Context;
-import org.bbloggsbott.exceptions.NotImplementedException;
 
 @ToString
-public class DataType<T> extends Block {
+public abstract class DataType<T, ChildName> extends Block {
 
     @Getter
     private final T value;
@@ -17,8 +16,11 @@ public class DataType<T> extends Block {
         this.value = value;
     }
 
-    public DataType<T> add(DataType<?> obj) throws NotImplementedException{
-        throw new NotImplementedException("add not implemented for DataType");
+    public abstract DataType<T, ?> add(ChildName obj);
+
+    @Override
+    public DataType<T, ChildName> execute() {
+        return this;
     }
 
 }

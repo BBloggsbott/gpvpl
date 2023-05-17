@@ -1,19 +1,22 @@
 package org.bbloggsbott.blocks.base.operands;
 
 import org.bbloggsbott.environment.Context;
-import org.bbloggsbott.blocks.base.datatypes.DataType;
-import org.bbloggsbott.exceptions.NotImplementedException;
+import org.bbloggsbott.exceptions.InvalidTypeException;
 
-public class Plus<T extends DataType<?>, T1 extends DataType<?>> extends Operator<T, T1> {
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
-    public Plus(Context context, T left, T1 right){
+public class Plus<T, T1> extends Operator<T, T1> {
+
+    public Plus(Context context, T left, T1 right) throws InvalidTypeException {
         super(context, left, right);
     }
 
 
     @Override
-    public T execute() throws NotImplementedException {
-        return (T) this.getLeft().add(this.getRight());
+    public T execute() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+        Method addMethod = this.getLeft().getClass().getMethod("add", this.getRight().getClass());
+        return (T) addMethod.invoke(this.getLeft(), this.getRight());
     }
 
 }
