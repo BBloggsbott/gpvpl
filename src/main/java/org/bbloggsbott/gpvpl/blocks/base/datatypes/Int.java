@@ -1,4 +1,4 @@
-package org.bbloggsbott.blocks.base.datatypes;
+package org.bbloggsbott.gpvpl.blocks.base.datatypes;
 
 public class Int extends DataType<Integer, Int>{
 

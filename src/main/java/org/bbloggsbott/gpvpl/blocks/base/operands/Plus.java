@@ -1,7 +1,7 @@
-package org.bbloggsbott.blocks.base.operands;
+package org.bbloggsbott.gpvpl.blocks.base.operands;
 
-import org.bbloggsbott.blocks.Block;
-import org.bbloggsbott.exceptions.InvalidTypeException;
+import org.bbloggsbott.gpvpl.blocks.Block;
+import org.bbloggsbott.gpvpl.exceptions.InvalidTypeException;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

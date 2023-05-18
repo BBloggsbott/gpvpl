@@ -1,7 +1,7 @@
-package org.bbloggsbott.blocks;
+package org.bbloggsbott.gpvpl.blocks;
 
 import lombok.Getter;
-import org.bbloggsbott.environment.Context;
+import org.bbloggsbott.gpvpl.environment.Context;
 
 public abstract class ContextualBlock extends Block {
 

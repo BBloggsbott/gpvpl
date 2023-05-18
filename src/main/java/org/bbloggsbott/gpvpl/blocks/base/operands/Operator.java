@@ -1,10 +1,10 @@
-package org.bbloggsbott.blocks.base.operands;
+package org.bbloggsbott.gpvpl.blocks.base.operands;
 
 import lombok.Getter;
 import lombok.ToString;
-import org.bbloggsbott.blocks.Block;
-import org.bbloggsbott.blocks.base.datatypes.DataType;
-import org.bbloggsbott.exceptions.InvalidTypeException;
+import org.bbloggsbott.gpvpl.blocks.Block;
+import org.bbloggsbott.gpvpl.blocks.base.datatypes.DataType;
+import org.bbloggsbott.gpvpl.exceptions.InvalidTypeException;
 
 @ToString
 public abstract class Operator extends Block {

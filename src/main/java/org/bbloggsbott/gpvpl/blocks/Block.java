@@ -1,4 +1,4 @@
-package org.bbloggsbott.blocks;
+package org.bbloggsbott.gpvpl.blocks;
 
 import java.lang.reflect.InvocationTargetException;
 

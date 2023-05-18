@@ -1,8 +1,8 @@
-package org.bbloggsbott.blocks.base.datatypes;
+package org.bbloggsbott.gpvpl.blocks.base.datatypes;
 
 import lombok.Getter;
 import lombok.ToString;
-import org.bbloggsbott.blocks.Block;
+import org.bbloggsbott.gpvpl.blocks.Block;
 
 @ToString
 public abstract class DataType<T, ChildName> extends Block {

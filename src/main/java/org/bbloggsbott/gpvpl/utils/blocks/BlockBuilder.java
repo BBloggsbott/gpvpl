@@ -1,11 +1,11 @@
-package org.bbloggsbott.utils.blocks;
+package org.bbloggsbott.gpvpl.utils.blocks;
 
 import lombok.Getter;
-import org.bbloggsbott.blocks.Block;
-import org.bbloggsbott.blocks.base.datatypes.Int;
-import org.bbloggsbott.blocks.base.operands.Plus;
-import org.bbloggsbott.environment.Context;
-import org.bbloggsbott.exceptions.InvalidTypeException;
+import org.bbloggsbott.gpvpl.blocks.Block;
+import org.bbloggsbott.gpvpl.blocks.base.datatypes.Int;
+import org.bbloggsbott.gpvpl.blocks.base.operands.Plus;
+import org.bbloggsbott.gpvpl.environment.Context;
+import org.bbloggsbott.gpvpl.exceptions.InvalidTypeException;
 import org.json.JSONArray;
 import org.json.JSONObject;
 

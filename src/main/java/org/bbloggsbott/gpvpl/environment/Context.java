@@ -1,9 +1,9 @@
-package org.bbloggsbott.environment;
+package org.bbloggsbott.gpvpl.environment;
 
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import org.bbloggsbott.blocks.ContextualBlock;
+import org.bbloggsbott.gpvpl.blocks.ContextualBlock;
 
 import java.util.HashMap;
 
