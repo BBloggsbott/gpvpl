@@ -4,19 +4,18 @@ import lombok.Getter;
 import lombok.ToString;
 import org.bbloggsbott.blocks.Block;
 import org.bbloggsbott.blocks.base.datatypes.DataType;
-import org.bbloggsbott.environment.Context;
 import org.bbloggsbott.exceptions.InvalidTypeException;
 
 @ToString
-public abstract class Operator<T, T1> extends Block {
+public abstract class Operator extends Block {
 
     @Getter
-    private final T left;
+    private final Block left;
     @Getter
-    private final T1 right;
+    private final Block right;
 
-    protected Operator(Context context, T left, T1 right) throws InvalidTypeException {
-        super(context);
+    protected Operator(Block left, Block right) throws InvalidTypeException {
+        super();
         if ( left instanceof DataType && right instanceof DataType ){
             this.left = left;
             this.right = right;
