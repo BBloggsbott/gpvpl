@@ -1,0 +1,24 @@
+[
+  {
+    "type": "Plus",
+    "left": {
+      "type": "Int",
+      "value": 5
+    },
+    "right": {
+      "type": "Int",
+      "value": 4
+    }
+  },
+  {
+    "type": "Plus",
+    "left": {
+      "type": "Int",
+      "value": 22
+    },
+    "right": {
+      "type": "Int",
+      "value": 39
+    }
+  }
+]

@@ -3,7 +3,6 @@ package org.bbloggsbott.blocks.base.datatypes;
 import lombok.Getter;
 import lombok.ToString;
 import org.bbloggsbott.blocks.Block;
-import org.bbloggsbott.environment.Context;
 
 @ToString
 public abstract class DataType<T, ChildName> extends Block {
@@ -11,8 +10,8 @@ public abstract class DataType<T, ChildName> extends Block {
     @Getter
     private final T value;
 
-    DataType(Context context, T value){
-        super(context);
+    DataType(T value){
+        super();
         this.value = value;
     }
 

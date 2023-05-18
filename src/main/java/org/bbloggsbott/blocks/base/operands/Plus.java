@@ -1,22 +1,21 @@
 package org.bbloggsbott.blocks.base.operands;
 
-import org.bbloggsbott.environment.Context;
+import org.bbloggsbott.blocks.Block;
 import org.bbloggsbott.exceptions.InvalidTypeException;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-public class Plus<T, T1> extends Operator<T, T1> {
+public class Plus extends Operator {
 
-    public Plus(Context context, T left, T1 right) throws InvalidTypeException {
-        super(context, left, right);
+    public Plus(Block left, Block right) throws InvalidTypeException {
+        super(left, right);
     }
 
-
     @Override
-    public T execute() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+    public Block execute() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
         Method addMethod = this.getLeft().getClass().getMethod("add", this.getRight().getClass());
-        return (T) addMethod.invoke(this.getLeft(), this.getRight());
+        return (Block) addMethod.invoke(this.getLeft(), this.getRight());
     }
 
 }

@@ -3,7 +3,7 @@ package org.bbloggsbott.environment;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import org.bbloggsbott.blocks.Block;
+import org.bbloggsbott.blocks.ContextualBlock;
 
 import java.util.HashMap;
 
@@ -11,7 +11,7 @@ import java.util.HashMap;
 public class Context {
 
     @Getter @Setter
-    private HashMap<String, Block> variables;
+    private HashMap<String, ContextualBlock> variables;
     private final Context prevContext;
 
     public Context(){
@@ -24,15 +24,15 @@ public class Context {
         this.variables = new HashMap<>();
     }
 
-    public void addVariable(String name, Block value){
+    public void addVariable(String name, ContextualBlock value){
         this.variables.put(name, value);
     }
 
-    public void addVariables(HashMap<String, Block> variables){
+    public void addVariables(HashMap<String, ContextualBlock> variables){
         this.variables.putAll(variables);
     }
 
-    public Block getVariable(String name){
+    public ContextualBlock getVariable(String name){
         if (this.variables.containsKey(name)){
             return this.variables.get(name);
         } else if (this.prevContext != null) {
