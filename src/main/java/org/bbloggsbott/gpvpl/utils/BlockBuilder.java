@@ -1,4 +1,4 @@
-package org.bbloggsbott.gpvpl.utils.blocks;
+package org.bbloggsbott.gpvpl.utils;
 
 import lombok.Getter;
 import org.bbloggsbott.gpvpl.blocks.Block;
