@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.ToString;
 import org.bbloggsbott.gpvpl.blocks.Block;
 
+import java.lang.reflect.InvocationTargetException;
+
 @ToString
 public abstract class DataType<T, ChildName> extends Block {
 
@@ -15,7 +17,7 @@ public abstract class DataType<T, ChildName> extends Block {
         this.value = value;
     }
 
-    public abstract DataType<T, ?> add(ChildName obj);
+    public abstract DataType<T, ?> add(Block obj) throws InvocationTargetException, NoSuchMethodException, IllegalAccessException;
 
     @Override
     public DataType<T, ChildName> execute() {

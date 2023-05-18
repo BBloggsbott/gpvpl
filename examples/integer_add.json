@@ -20,5 +20,30 @@
       "type": "Int",
       "value": 39
     }
+  },
+  {
+    "type": "Plus",
+    "left": {
+      "type": "Plus",
+      "left": {
+        "type": "Int",
+        "value": 23
+      },
+      "right": {
+        "type": "Int",
+        "value": 19
+      }
+    },
+    "right": {
+      "type": "Plus",
+      "left": {
+        "type": "Int",
+        "value": 20
+      },
+      "right": {
+        "type": "Int",
+        "value": 30
+      }
+    }
   }
 ]
