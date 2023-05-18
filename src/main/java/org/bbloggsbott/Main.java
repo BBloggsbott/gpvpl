@@ -3,7 +3,7 @@ package org.bbloggsbott;
 import org.bbloggsbott.blocks.Block;
 import org.bbloggsbott.environment.Context;
 import org.bbloggsbott.exceptions.InvalidTypeException;
-import org.bbloggsbott.runner.Executor;
+import org.bbloggsbott.executor.Executor;
 import org.bbloggsbott.utils.blocks.BlockBuilder;
 import org.json.JSONArray;
 
