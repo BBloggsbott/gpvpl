@@ -3,6 +3,8 @@
 ## Table of Contents
 1. [Table of Contents](#table-of-contents)
 2. [Introduction](#introduction)
+3. [Roadmap](#roadmap)
+4. [Plug and Play Front-end](#plug-and-play-front-end)
 
 
 ## Introduction
