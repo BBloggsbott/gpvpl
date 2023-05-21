@@ -5,7 +5,7 @@ import org.bbloggsbott.gpvpl.blocks.Block;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-public class Int extends DataType<Integer, Int>{
+public class Int extends DataType<Integer>{
 
     public Int(Integer value){
         super(value);

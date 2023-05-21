@@ -7,7 +7,7 @@ import org.bbloggsbott.gpvpl.blocks.Block;
 import java.lang.reflect.InvocationTargetException;
 
 @ToString
-public abstract class DataType<T, ChildName> extends Block {
+public abstract class DataType<T> extends Block {
 
     @Getter
     private final T value;
@@ -17,10 +17,10 @@ public abstract class DataType<T, ChildName> extends Block {
         this.value = value;
     }
 
-    public abstract DataType<T, ?> add(Block obj) throws InvocationTargetException, NoSuchMethodException, IllegalAccessException;
+    public abstract DataType<T> add(Block obj) throws InvocationTargetException, NoSuchMethodException, IllegalAccessException;
 
     @Override
-    public DataType<T, ChildName> execute() {
+    public DataType<T> execute() {
         return this;
     }
 
