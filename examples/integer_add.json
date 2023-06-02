@@ -1,5 +1,6 @@
 [
   {
+    "description": "Int+Int",
     "type": "Plus",
     "left": {
       "type": "Int",
@@ -11,6 +12,7 @@
     }
   },
   {
+    "description": "Int+Int",
     "type": "Plus",
     "left": {
       "type": "Int",
@@ -22,6 +24,7 @@
     }
   },
   {
+    "description": "(Int+Int)+(Int+Int)",
     "type": "Plus",
     "left": {
       "type": "Plus",
@@ -47,6 +50,7 @@
     }
   },
   {
+    "description": "a = Int",
     "type": "Assignment",
     "name": "a",
     "value": {
@@ -55,6 +59,7 @@
     }
   },
   {
+    "description": "b = Int",
     "type": "Assignment",
     "name": "b",
     "value": {
@@ -63,6 +68,7 @@
     }
   },
   {
+    "description": "a + b",
     "type": "Plus",
     "left": {
       "type": "DefinedVariable",
@@ -71,6 +77,30 @@
     "right": {
       "type": "DefinedVariable",
       "name": "b"
+    }
+  },
+  {
+    "description": "Str+Str",
+    "type": "Plus",
+    "left": {
+      "type": "Str",
+      "value": "Hello"
+    },
+    "right": {
+      "type": "Str",
+      "value": "There"
+    }
+  },
+  {
+    "description": "Str+Int",
+    "type": "Plus",
+    "left": {
+      "type": "Str",
+      "value": "Sample: "
+    },
+    "right": {
+      "type": "Int",
+      "value": 4
     }
   }
 ]

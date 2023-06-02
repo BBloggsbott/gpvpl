@@ -1,22 +1,23 @@
-package org.bbloggsbott.gpvpl.block.base.operator;
+package org.bbloggsbott.gpvpl.block.base.operator.arithmetic;
 
 import org.bbloggsbott.gpvpl.block.Block;
+import org.bbloggsbott.gpvpl.block.base.operator.Operator;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class Plus extends Operator {
 
+    private final String ADD = "add";
+
     public Plus(Block left, Block right) {
         super(left, right);
     }
 
+
     @Override
     public Block execute() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
-        Block executedLeft = this.getLeft().execute();
-        Block executedRight = this.getRight().execute();
-        Method addMethod = executedLeft.getClass().getMethod("add", Block.class);
-        return executedLeft.getClass().cast(addMethod.invoke(executedLeft, executedRight));
+        return this.performArithmeticOperation(ADD);
     }
 
 }

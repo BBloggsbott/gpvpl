@@ -14,9 +14,11 @@ public class Int extends DataType<Integer>{
 
 
     @Override
-    public Int add(Block obj) throws InvocationTargetException, NoSuchMethodException, IllegalAccessException {
+    public Int add(Block obj) throws NumberFormatException, InvocationTargetException, NoSuchMethodException, IllegalAccessException {
         Method getValueMethod = obj.getClass().getMethod("getValue");
-        return new Int(this.getValue() + (Integer) getValueMethod.invoke(obj));
+        // Throws NumberFormatException when String cannot be parsed
+        Integer parsedInt = Integer.parseInt(getValueMethod.invoke(obj).toString());
+        return new Int(this.getValue() + parsedInt);
     }
 
 }

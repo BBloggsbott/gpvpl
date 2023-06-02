@@ -3,10 +3,10 @@ package org.bbloggsbott.gpvpl.utils;
 import lombok.Getter;
 import org.bbloggsbott.gpvpl.block.Block;
 import org.bbloggsbott.gpvpl.block.base.datatype.Int;
+import org.bbloggsbott.gpvpl.block.base.datatype.Str;
 import org.bbloggsbott.gpvpl.block.base.operator.Assignment;
-import org.bbloggsbott.gpvpl.block.base.operator.Plus;
+import org.bbloggsbott.gpvpl.block.base.operator.arithmetic.Plus;
 import org.bbloggsbott.gpvpl.block.base.variable.DefinedVariable;
-import org.bbloggsbott.gpvpl.block.base.variable.Variable;
 import org.bbloggsbott.gpvpl.environment.Context;
 import org.bbloggsbott.gpvpl.exception.InvalidTypeException;
 import org.json.JSONArray;
@@ -17,7 +17,9 @@ import java.util.List;
 
 public class BlockBuilder {
 
+    private final String VALUE = "value";
     private final String INT = "Int";
+    private final String STR = "Str";
     private final String PLUS = "Plus";
     private final String ASSIGNMENT = "Assignment";
     private final String DEFINED_VARIABLE = "DefinedVariable";
@@ -30,7 +32,11 @@ public class BlockBuilder {
     }
 
     private Int buildInt(JSONObject jsonObject){
-        return new Int(jsonObject.getInt("value"));
+        return new Int(jsonObject.getInt(VALUE));
+    }
+
+    private Str buildStr(JSONObject jsonObject){
+        return new Str(jsonObject.getString(VALUE));
     }
 
     private Plus buildPlus(JSONObject jsonObject, Context context) throws InvalidTypeException {
@@ -41,7 +47,7 @@ public class BlockBuilder {
 
     private Assignment buildAssignment(JSONObject jsonObject, Context context) throws InvalidTypeException {
         String name = jsonObject.getString("name");
-        Block value = buildBlock(jsonObject.getJSONObject("value"), context);
+        Block value = buildBlock(jsonObject.getJSONObject(VALUE), context);
         return new Assignment(name, value, context);
     }
 
@@ -55,11 +61,14 @@ public class BlockBuilder {
     private Block buildBlock(JSONObject jsonObject, Context context) throws InvalidTypeException {
         Block block;
         switch (jsonObject.getString("type")){
-            case PLUS:
-                block =  buildPlus(jsonObject, context);
-                break;
             case INT:
                 block = buildInt(jsonObject);
+                break;
+            case STR:
+                block = buildStr(jsonObject);
+                break;
+            case PLUS:
+                block =  buildPlus(jsonObject, context);
                 break;
             case ASSIGNMENT:
                 block = buildAssignment(jsonObject, context);
