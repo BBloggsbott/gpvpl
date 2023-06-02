@@ -1,4 +1,4 @@
-package org.bbloggsbott.gpvpl.exceptions;
+package org.bbloggsbott.gpvpl.exception;
 
 public class InvalidTypeException extends Exception {
 

@@ -45,5 +45,32 @@
         "value": 30
       }
     }
+  },
+  {
+    "type": "Assignment",
+    "name": "a",
+    "value": {
+      "type": "Int",
+      "value": 30
+    }
+  },
+  {
+    "type": "Assignment",
+    "name": "b",
+    "value": {
+      "type": "Int",
+      "value": 40
+    }
+  },
+  {
+    "type": "Plus",
+    "left": {
+      "type": "DefinedVariable",
+      "name": "a"
+    },
+    "right": {
+      "type": "DefinedVariable",
+      "name": "b"
+    }
   }
 ]

@@ -1,8 +1,8 @@
-package org.bbloggsbott.gpvpl.blocks.base.operands;
+package org.bbloggsbott.gpvpl.block.base.operator;
 
 import lombok.Getter;
 import lombok.ToString;
-import org.bbloggsbott.gpvpl.blocks.Block;
+import org.bbloggsbott.gpvpl.block.Block;
 
 @ToString
 public abstract class Operator extends Block {

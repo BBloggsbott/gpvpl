@@ -3,7 +3,8 @@ package org.bbloggsbott.gpvpl.environment;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import org.bbloggsbott.gpvpl.blocks.ContextualBlock;
+import org.bbloggsbott.gpvpl.block.Block;
+import org.bbloggsbott.gpvpl.block.base.variable.Variable;
 
 import java.util.HashMap;
 
@@ -11,7 +12,7 @@ import java.util.HashMap;
 public class Context {
 
     @Getter @Setter
-    private HashMap<String, ContextualBlock> variables;
+    private HashMap<String, Variable> variables;
     private final Context prevContext;
 
     public Context(){
@@ -24,15 +25,15 @@ public class Context {
         this.variables = new HashMap<>();
     }
 
-    public void addVariable(String name, ContextualBlock value){
+    public void addVariable(String name, Variable value){
         this.variables.put(name, value);
     }
 
-    public void addVariables(HashMap<String, ContextualBlock> variables){
+    public void addVariables(HashMap<String, Variable> variables){
         this.variables.putAll(variables);
     }
 
-    public ContextualBlock getVariable(String name){
+    public Variable getVariable(String name){
         if (this.variables.containsKey(name)){
             return this.variables.get(name);
         } else if (this.prevContext != null) {

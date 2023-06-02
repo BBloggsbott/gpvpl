@@ -1,6 +1,6 @@
 package org.bbloggsbott.gpvpl.executor;
 
-import org.bbloggsbott.gpvpl.blocks.Block;
+import org.bbloggsbott.gpvpl.block.Block;
 import org.bbloggsbott.gpvpl.environment.Context;
 
 import java.lang.reflect.InvocationTargetException;

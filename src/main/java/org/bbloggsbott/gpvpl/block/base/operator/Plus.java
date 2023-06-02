@@ -1,6 +1,6 @@
-package org.bbloggsbott.gpvpl.blocks.base.operands;
+package org.bbloggsbott.gpvpl.block.base.operator;
 
-import org.bbloggsbott.gpvpl.blocks.Block;
+import org.bbloggsbott.gpvpl.block.Block;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

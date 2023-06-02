@@ -1,8 +1,8 @@
 package org.bbloggsbott;
 
-import org.bbloggsbott.gpvpl.blocks.Block;
+import org.bbloggsbott.gpvpl.block.Block;
 import org.bbloggsbott.gpvpl.environment.Context;
-import org.bbloggsbott.gpvpl.exceptions.InvalidTypeException;
+import org.bbloggsbott.gpvpl.exception.InvalidTypeException;
 import org.bbloggsbott.gpvpl.executor.Executor;
 import org.bbloggsbott.gpvpl.utils.BlockBuilder;
 import org.json.JSONArray;

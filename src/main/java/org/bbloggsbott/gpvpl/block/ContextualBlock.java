@@ -1,4 +1,4 @@
-package org.bbloggsbott.gpvpl.blocks;
+package org.bbloggsbott.gpvpl.block;
 
 import lombok.Getter;
 import org.bbloggsbott.gpvpl.environment.Context;
