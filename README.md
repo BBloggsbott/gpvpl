@@ -26,7 +26,7 @@ This is done by using terminology, syntax and concepts similar to these language
 |--------------------------------------------------------------------|-------------|----------|
 | Introduce Basic Data types - `Int`, `String`, `Float`, `Bool`      | In Progress |          |
 | Introduce Basic Opeators - `+`, `-`, `*`, `/`, `%`                 | In Progress |          |
-| Introduce Vairable creation and assignments                        |             |          |
+| Introduce Vairable creation and assignments                        | In Progress |          |
 | Introduce Conditional operators - `>`, `<`, `>=`, `<=`, `==`, `!=` |             |          |
 | Introduce `if/else` statements                                     |             |          |
 | Introduce Loops                                                    |             |          |
