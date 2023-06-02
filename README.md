@@ -11,7 +11,7 @@
 GPVPL is a Visual Programming Language built with two goals.
 
 ### A General Purpose Language
-A lot of the widely used Visual Programming Languages are built either for education (Scratch, Snap!), built to function inside specific applications (Blender's node graphs) or built for specific use cases (Cameleon, Nodal).
+A lot of the widely used Visual Programming Languages are either built for education (Scratch, Snap!), built to function inside specific applications (Blender's node graphs) or built for specific use cases (Cameleon, Nodal).
 
 GPVPL is being built with the goal to be a general purpose language that can be used for a wide variety of tasks.
 
