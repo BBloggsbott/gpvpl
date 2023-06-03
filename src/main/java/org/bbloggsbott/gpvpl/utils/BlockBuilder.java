@@ -2,6 +2,8 @@ package org.bbloggsbott.gpvpl.utils;
 
 import lombok.Getter;
 import org.bbloggsbott.gpvpl.block.Block;
+import org.bbloggsbott.gpvpl.block.base.datatype.Bool;
+import org.bbloggsbott.gpvpl.block.base.datatype.Floating;
 import org.bbloggsbott.gpvpl.block.base.datatype.Int;
 import org.bbloggsbott.gpvpl.block.base.datatype.Str;
 import org.bbloggsbott.gpvpl.block.base.operator.Assignment;
@@ -19,6 +21,8 @@ public class BlockBuilder {
 
     private final String VALUE = "value";
     private final String INT = "Int";
+    private final String FLOAT = "Float";
+    private final String BOOL = "Bool";
     private final String STR = "Str";
     private final String PLUS = "Plus";
     private final String ASSIGNMENT = "Assignment";
@@ -37,6 +41,14 @@ public class BlockBuilder {
 
     private Str buildStr(JSONObject jsonObject){
         return new Str(jsonObject.getString(VALUE));
+    }
+
+    private Bool buildBool(JSONObject jsonObject){
+        return new Bool(jsonObject.getBoolean(VALUE));
+    }
+
+    private Floating buildFloat(JSONObject jsonObject){
+        return new Floating(jsonObject.getFloat(VALUE));
     }
 
     private Plus buildPlus(JSONObject jsonObject, Context context) throws InvalidTypeException {
@@ -66,6 +78,12 @@ public class BlockBuilder {
                 break;
             case STR:
                 block = buildStr(jsonObject);
+                break;
+            case BOOL:
+                block = buildBool(jsonObject);
+                break;
+            case FLOAT:
+                block = buildFloat(jsonObject);
                 break;
             case PLUS:
                 block =  buildPlus(jsonObject, context);

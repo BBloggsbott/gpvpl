@@ -3,7 +3,6 @@ package org.bbloggsbott.gpvpl.environment;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import org.bbloggsbott.gpvpl.block.Block;
 import org.bbloggsbott.gpvpl.block.base.variable.Variable;
 
 import java.util.HashMap;
