@@ -1,5 +1,7 @@
 # GPVPL - General Purpose Visual Programming Language
 
+![Work in Progress](https://img.shields.io/badge/status-work--in--progress-red)
+
 ## Table of Contents
 1. [Table of Contents](#table-of-contents)
 2. [Introduction](#introduction)
