@@ -1,0 +1,142 @@
+[
+  {
+    "description": "Int+Int",
+    "type": "Plus",
+    "left": {
+      "type": "Int",
+      "value": 5
+    },
+    "right": {
+      "type": "Int",
+      "value": 4
+    }
+  },
+  {
+    "description": "Int+Int",
+    "type": "Plus",
+    "left": {
+      "type": "Int",
+      "value": 22
+    },
+    "right": {
+      "type": "Int",
+      "value": 39
+    }
+  },
+  {
+    "description": "(Int+Int)+(Int+Int)",
+    "type": "Plus",
+    "left": {
+      "type": "Plus",
+      "left": {
+        "type": "Int",
+        "value": 23
+      },
+      "right": {
+        "type": "Int",
+        "value": 19
+      }
+    },
+    "right": {
+      "type": "Plus",
+      "left": {
+        "type": "Int",
+        "value": 20
+      },
+      "right": {
+        "type": "Int",
+        "value": 30
+      }
+    }
+  },
+  {
+    "description": "a = Int",
+    "type": "Assignment",
+    "name": "a",
+    "value": {
+      "type": "Int",
+      "value": 30
+    }
+  },
+  {
+    "description": "b = Int",
+    "type": "Assignment",
+    "name": "b",
+    "value": {
+      "type": "Int",
+      "value": 40
+    }
+  },
+  {
+    "description": "a + b",
+    "type": "Plus",
+    "left": {
+      "type": "DefinedVariable",
+      "name": "a"
+    },
+    "right": {
+      "type": "DefinedVariable",
+      "name": "b"
+    }
+  },
+  {
+    "description": "Str+Str",
+    "type": "Plus",
+    "left": {
+      "type": "Str",
+      "value": "Hello"
+    },
+    "right": {
+      "type": "Str",
+      "value": "There"
+    }
+  },
+  {
+    "description": "Str+Int",
+    "type": "Plus",
+    "left": {
+      "type": "Str",
+      "value": "Sample: "
+    },
+    "right": {
+      "type": "Int",
+      "value": 4
+    }
+  },
+  {
+    "description": "Float+Float",
+    "type": "Plus",
+    "left": {
+      "type": "Float",
+      "value": 5.5
+    },
+    "right": {
+      "type": "Float",
+      "value": 4.6
+    }
+  },
+  {
+    "description": "Float+Int",
+    "type": "Plus",
+    "left": {
+      "type": "Float",
+      "value": 5.3
+    },
+    "right": {
+      "type": "Int",
+      "value": 4
+    }
+  },
+  {
+    "description": "Int+Float",
+    "type": "Plus",
+    "left": {
+      "type": "Int",
+      "value": 5
+    },
+    "right": {
+      "type": "Float",
+      "value": 4.9
+    }
+  }
+]
